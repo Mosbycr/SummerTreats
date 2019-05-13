@@ -1,23 +1,23 @@
 <div class="container">
-    <div class="row">
+    <div class="row text-center">
         <div class="col-12">
-            <h1 class="text">Summer Treats</h1>
+            <h1 class="text mt-4">Summer Treats</h1>
             <br>
-            <img src="" alt="">
+            <img src="/assets/img/cupcakesSmall.jpg" alt="cupcakes"/>
 
-            <h3 class="text">Eat Those Yummy Sweet Summer Treats!</h3>
+            <h3 class="text pt-4">Eat Those Yummy Sweet Summer Treats!</h3>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row text-center">
         <div class="col-6">
             <ul>
                 {{#each treats}}
                 {{#unless devoured}}
                     <p class="notEaten">
-                        {{!-- {{treat_name}} --}}
                         {{this.treat_name}}
-                        <button  id="devbtn" data-id="{{id}}" data-newsleep="{{devoured}}">
+                        {{!-- noweaten connects to the summerTreats.js when button clicked and created ajax to change devoured to true --}}
+                        <button class="ml-2" id="devbtn" data-id="{{id}}" data-noweaten="{{devoured}}"> 
                             Devour Me!</button>
                     </p>
                     {{/unless}}
@@ -39,9 +39,9 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row text-center">
         <div class="col-12">
-            <h3 class="text">Enter a Treat to Eat</h3>
+            <h3 class="text pt-4">Enter a Treat to Eat</h3>
             <form class="create-form">
             
                 <div class="form-group">
