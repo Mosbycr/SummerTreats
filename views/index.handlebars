@@ -14,9 +14,9 @@
             <ul>
                 {{#each treats}}
                     <p>
-                        {{this.id}} {{this.treat}}
-
-                        <button data-id="{{id}}" data-newsleep="{{devoured}}">
+                        {{!-- {{treat_name}} --}}
+                        {{this.id}} {{this.treat_name}}
+                        <button  id="devbtn" data-id="{{id}}" data-newsleep="{{devoured}}">
                             Devour Me!</button>
                     </p>
                 {{/each}}
@@ -25,13 +25,13 @@
         </div>
 
         <div class="col-6">
-            <ul>
+            {{!-- <ul>
                 {{#each treats}}
                 {{#unless devoured}}
                 {{> treats devoured=false}}
                 {{/unless}}
                 {{/each}}
-            </ul>
+            </ul> --}}
         </div>
     </div>
 
