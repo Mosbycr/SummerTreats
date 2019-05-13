@@ -13,13 +13,15 @@
         <div class="col-6">
             <ul>
                 {{#each treats}}
-                {{#if devoured}}
-                {{> treats devoured=true}}
-                {{/unless}}
+                    <p>
+                        {{this.id}} {{this.treat}}
+
+                        <button data-id="{{id}}" data-newsleep="{{devoured}}">
+                            Devour Me!</button>
+                    </p>
                 {{/each}}
             </ul>
-            <button data-id="{{id}}" data-newsleep="{{devoured}}">
-            Devour Me!</button>
+            
         </div>
 
         <div class="col-6">
