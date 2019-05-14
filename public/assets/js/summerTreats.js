@@ -1,7 +1,7 @@
 $(function() {
+    //when click devour me button creats key and value to be changed in database
   $("#devbtn").on("click", function(event) {
     var id = $(this).data("id");
-    // var nowEaten = $(this).data("nowEaten");
 
     var nowEaten = {
       devoured: true
@@ -16,6 +16,7 @@ $(function() {
     });
   });
 
+  //when click submit button form value is grabbed and new key/value is created and sent to database
   $(".create-form").on("submit", function(event) {
     event.preventDefault();
 
@@ -25,14 +26,12 @@ $(function() {
         .trim()
     };
 
-    console.log(newTreat);
-
+    // console.log(newTreat);
     $.ajax("/api/treats", {
       type: "POST",
       data: newTreat
     }).then(function() {
-      console.log("added a new treat");
-
+    //   console.log("added a new treat");
       location.reload();
     });
   });
