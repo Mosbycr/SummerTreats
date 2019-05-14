@@ -16,7 +16,7 @@ $(function() {
     });
   });
 
-  $("#treatSumbit").on("click", function(event) {
+  $("#treatSumbit").on("submit", function(event) {
     event.preventDefault();
 
     var newTreat = {
@@ -28,13 +28,13 @@ $(function() {
 
     console.log(newTreat);
 
-    $.ajax("/api/treats", {
-      type: "POST",
-      data: newTreat
-    }).then(function() {
-      console.log("added a new treat");
+    // $.ajax("/api/treats", {
+    //   type: "POST",
+    //   data: newTreat
+    // }).then(function() {
+    //   console.log("added a new treat");
 
-      location.reload();
-    });
+    //   location.reload();
+    // });
   });
 });
