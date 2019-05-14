@@ -16,25 +16,24 @@ $(function() {
     });
   });
 
-  $("#treatSumbit").on("submit", function(event) {
+  $(".create-form").on("submit", function(event) {
     event.preventDefault();
 
     var newTreat = {
       treat_name: $("#treatName")
         .val()
-        .trim(),
-      devoured: false
+        .trim()
     };
 
     console.log(newTreat);
 
-    // $.ajax("/api/treats", {
-    //   type: "POST",
-    //   data: newTreat
-    // }).then(function() {
-    //   console.log("added a new treat");
+    $.ajax("/api/treats", {
+      type: "POST",
+      data: newTreat
+    }).then(function() {
+      console.log("added a new treat");
 
-    //   location.reload();
-    // });
+      location.reload();
+    });
   });
 });

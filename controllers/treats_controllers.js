@@ -16,8 +16,8 @@ router.get("/", function(req, res) {
 
 router.post("/api/treats", function(req, res) {
   treats.insertOne(
-    ["treat_name", "devoured"],
-    [req.body.treat_name, req.body.devoured],
+    ["treat_name"],
+    [req.body.treat_name],
     function(result) {
       res.json({ id: result.insertID });
     }
