@@ -1,5 +1,7 @@
+//grab orm.js
 var orm = require("../config/orm.js");
 
+//takes functions in orm, calls them, states table name and parameters to be used
 var treats = {
   selectAll: function(cb) {
     orm.selectAll("treats", function(res) {

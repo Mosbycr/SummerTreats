@@ -1,5 +1,7 @@
+//grab mysql connection
 var connection = require("../config/connection.js");
 
+//prints questionmarks where needed in mysql queries
 function printQuestionMarks(num) {
   var arr = [];
 
@@ -31,6 +33,7 @@ function objToSql(ob) {
   return arr.toString();
 }
 
+//functions stating parameters to be used in query and sets up mysql query string
 var orm = {
   selectAll: function(tableInput, cb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
