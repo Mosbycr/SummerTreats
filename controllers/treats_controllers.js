@@ -14,6 +14,16 @@ router.get("/", function(req, res) {
   });
 });
 
+router.post("/api/treats", function(req, res) {
+  treats.insertOne(
+    ["treat_name", "devoured"],
+    [req.body.treat_name, req.body.devoured],
+    function(result) {
+      res.json({ id: result.insertID });
+    }
+  );
+});
+
 router.put("/api/treats/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
@@ -34,14 +44,6 @@ router.put("/api/treats/:id", function(req, res) {
   );
 });
 
-router.post("/api/treats", function(req, res){
-  treats.insertOne([
-    "treat_name", "devoured"
-  ], [
-    req.body.treat_name, req.body.devoured
-  ], function(result){
-    res.json({ id: result.insertID });
-  });
-});
+
 
 module.exports = router;
