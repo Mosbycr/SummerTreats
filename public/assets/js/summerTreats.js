@@ -22,8 +22,11 @@ $(function() {
     var newTreat = {
       treat_name: $("#treatName")
         .val()
-        .trim()
+        .trim(),
+      devoured: false
     };
+
+    console.log(newTreat);
 
     $.ajax("/api/treats", {
       type: "POST",
