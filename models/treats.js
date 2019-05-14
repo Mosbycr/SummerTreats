@@ -5,6 +5,11 @@ var treats = {
     orm.selectAll("treats", function(res) {
       cb(res);
     });
+  },
+  updateOne: function(objColVals, condition, cb){
+    orm.updateOne("treats", objColVals, condition, function(res){
+      cb(res);
+    });
   }
 };
 module.exports = treats;
