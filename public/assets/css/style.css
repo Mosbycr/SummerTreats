@@ -2,8 +2,21 @@ html, body {
     background-color: rgb(245, 221, 219);
 }
 
+.header {
+    font-size: 58px;
+    color: darkred;
+}
+
 img{
     border: 4px solid white;
+}
+
+.font {
+    font-family: 'Rancho', cursive;
+}
+
+ul {
+   font-size: 20px;
 }
 
 .form-control {
@@ -11,10 +24,22 @@ img{
     margin: auto;
 }
 
-.text {
-    font-family: 'Rancho', cursive;
+.red {
+    color: darkred;
 }
 
-ul {
-    font-family: 'Rancho', cursive;
+.violetRed {
+    color: palevioletred;
+}
+
+.size25 {
+    font-size: 25px;
+}
+
+.eatBtn, #treatSubmit {
+    text-decoration: none;
+    font-size: 18px;
+    color: darkRed;
+    background-color: white;
+    border: 1px dotted darkRed;
 }
