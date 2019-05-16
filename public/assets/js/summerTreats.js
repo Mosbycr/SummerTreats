@@ -11,7 +11,7 @@ $(function() {
       type: "PUT",
       data: nowEaten
     }).then(function() {
-      console.log("changed devoured to TRUE");
+      //console.log("changed devoured to TRUE");
       location.reload();
     });
   });
