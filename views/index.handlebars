@@ -17,9 +17,9 @@
                 {{#each treats}}
                 {{#unless devoured}}
                     <p class="notEaten">
-                        {{this.id}} {{this.treat_name}}
+                        {{id}} {{treat_name}}
                         {{!-- noweaten connects to the summerTreats.js when button clicked and created ajax to change devoured to true --}}
-                        <button class="eatBtn ml-2" id="devbtn" data-id="{{this.id}}"> 
+                        <button class="eatBtn ml-2 devbtn" data-id="{{id}}"> 
                             Eat Me!</button>
                     </p>
                     {{/unless}}
@@ -34,7 +34,7 @@
                 {{#each treats}}
                 {{#if devoured}}
                 <p class="eaten">
-                {{this.id}} {{this.treat_name}}
+                {{id}} {{treat_name}}
                 </p>
                 {{/if}}
                 {{/each}}

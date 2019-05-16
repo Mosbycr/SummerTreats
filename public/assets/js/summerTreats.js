@@ -1,6 +1,6 @@
 $(function() {
     //when click devour me button creats key and value to be changed in database
-  $("#devbtn").on("click", function(event) {
+  $(".devbtn").on("click", function(event) {
     var id = $(this).data("id");
 
     var nowEaten = {
