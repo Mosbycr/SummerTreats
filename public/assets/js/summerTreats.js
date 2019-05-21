@@ -19,20 +19,25 @@ $(function() {
   //when click submit button form value is grabbed and new key/value is created and sent to database
   $(".create-form").on("submit", function(event) {
     event.preventDefault();
+  
+  var newTreat;  
 
-    var newTreat = {
-      treat_name: $("#treatName")
-        .val()
-        .trim()
-    };
-
-    // console.log(newTreat);
-    $.ajax("/api/treats", {
-      type: "POST",
-      data: newTreat
-    }).then(function() {
-    //   console.log("added a new treat");
-      location.reload();
-    });
+    if ($("#treatName").val() === ""){
+      alert("Please enter a valid treat")
+    } else {
+      newTreat = {
+        treat_name: $("#treatName")
+          .val()
+          .trim()
+      };
+    }
+      // console.log(newTreat);
+      $.ajax("/api/treats", {
+        type: "POST",
+        data: newTreat
+      }).then(function() {
+        //   console.log("added a new treat");
+        location.reload();
+      });
   });
 });
