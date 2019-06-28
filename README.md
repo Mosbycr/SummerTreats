@@ -1,7 +1,7 @@
 # Summer Treats 
 A web application that allows users to add treats and eat their favorite summer time treats. 
 
-Utilized HTML, CSS, Bootstrap4, jQuery, Node.js, Express.js, Handlebars.js, AJAX, ORM, MVC, REST APIs.
+Utilized HTML, CSS, Bootstrap4, jQuery, Node.js, Express.js, Handlebars.js, AJAX, ORM, MVC, REST APIs, MySQL
 
 Visit the live application via Heroku: https://lit-tundra-51997.herokuapp.com/
 
